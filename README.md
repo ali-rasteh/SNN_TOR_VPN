@@ -1,21 +1,3 @@
-# PIR-SNN-TOR-VPN: Encrypted Internet traffic classification using a supervised Spiking Neural Network
+# SNN_TOR_VPN: Encrypted Internet Traffic Classification Using a Supervised Spiking Neural Network
 
-Internet traffic recognition is an essential tool for access providers since recognizing applications related to different data packets transmitted on a network help them define adapted priorities. That means, for instance, high capacity requirements for an audio conference and, low ones for a file transfer. The intended effect is to enhance users’ experience. Nevertheless, internet traffic is increasingly encrypted which makes classic traffic recognition techniques, such as payload inspection, ineffective. Thus, this research aims at doing the same thing using machine learning techniques for encrypted traffic classification, looking only at packet size and time of arrival. Spiking neural networks (SNN), largely inspired by how biological neurons operate, were used for their ability to recognize time-related data packet features. Furthermore, such SNNs could be implemented efficiently on neuromorphic hardware with a low energy footprint.
-
-Content:
-- Bibliography:
-  * "bibliography": complete bibliography report
-  * "Recap articles": quick sum up of relevant references
-  * Folder "Articles": articles for the bibliography
-
-- Internet_traffic:
-  * "Dataset_repartition": sample repartition between training, validation and testing datasets
-  * "IP_adresses_dictionnary": each histogram name contains 4 numbers. The first two correspond to IP     adresses (the last two to port numbers). 
-  * Folder "Processing programs": Python programs used to process original dataset
-
-- SNN:
-  * "data, models, optim, utils": Python programs to run the notebook
-  * "Labels": list of labels
-  * Folder "Dataset": CSV-files containing packet' size and time of arrival for each histogram
-  * Folder "Model and results": information about the proposed model (parameters, performances, saved model)
-  * Folder "Notebook": the notebook to run 
+Internet traffic recognition is essential for access providers since it helps them define adapted priorities in order to enhance user experience, e.g., a high priority for an audio conference and a low priority for a file transfer. As internet traffic becomes increasingly encrypted, the main classic traffic recognition technique, payload inspection, is rendered ineffective. Hence this paper uses machine learning techniques looking only at packet size and time of arrival. For the first time, Spiking neural networks (SNNs), which are inspired by biological neurons, were used for this task for two reasons. Firstly, they can recognize time-related data packet features. Secondly, they can be implemented efficiently on neuromorphic hardware. Here we used a simple feedforward SNN, with only one fully connected hidden layer, and trained in a supervised manner using the new method known as Surrogate Gradient Learning. Surprisingly, such a simple SNN reached an accuracy of 95.9% on ISCX datasets, outperforming previous approaches. Besides better accuracy, there is also a significant improvement in simplicity: input size, the number of neurons, trainable parameters are all reduced by one to four orders of magnitude. Next, we analyzed the reasons for this good performance. It turns out that, beyond spatial (i.e., packet size) features, the SNN also exploits temporal ones, mainly the nearly synchronous (i.e., within a 200ms range) arrival times of packets with specific sizes. Taken together, these results show that SNNs are an excellent fit for encrypted internet traffic classification: they can be more accurate than conventional artificial neural networks (ANN), and they could be implemented efficiently on low-power embedded systems.
