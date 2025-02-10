@@ -107,6 +107,24 @@ The labels are stored in the `SNN/Labels.csv` file.
 
 Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
 
+## Citation
+
+If you use this repository or code in your research, please cite it as follows:
+
+### BibTeX
+```bibtex
+@misc{Rasteh_SNN_TOR_VPN,
+  author       = {Rasteh, Ali and Delpech, Florian},
+  title        = {SNN_TOR_VPN: Encrypted Internet Traffic Classification Using a Supervised Spiking Neural Network},
+  year         = {2022},
+  publisher    = {GitHub},
+  journal      = {GitHub repository},
+  howpublished = {\url{https://github.com/ali-rasteh/SNN_TOR_VPN}},
+  doi          = {[![DOI](https://zenodo.org/badge/451463674.svg)](https://doi.org/10.5281/zenodo.14846258)},
+  note         = {Accessed: 2022-01-25}
+}
+```
+
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
